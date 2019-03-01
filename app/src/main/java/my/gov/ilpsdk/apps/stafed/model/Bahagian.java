@@ -104,6 +104,8 @@ public class Bahagian implements Serializable {
             case "auto":
                 group_cion = R.drawable.auto;
                 break;
+            case "phs":
+                group_cion = R.drawable.psh;
 
         }
         return group_cion;

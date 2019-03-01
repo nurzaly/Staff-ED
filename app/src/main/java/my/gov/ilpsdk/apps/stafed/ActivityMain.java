@@ -23,11 +23,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.squareup.picasso.Picasso;
 
 import java.util.Locale;
 
 import my.gov.ilpsdk.apps.stafed.Services.AppDatabase;
+import my.gov.ilpsdk.apps.stafed.Utils.Helper;
 import my.gov.ilpsdk.apps.stafed.data.Constant;
 import my.gov.ilpsdk.apps.stafed.data.GlobalVariable;
 import my.gov.ilpsdk.apps.stafed.data.Tools;
@@ -195,6 +197,26 @@ private String get_avatar(String email){
             case R.id.nav_change_password:
                 Intent intent = new Intent(this, ActivityChangePassword.class);
                 startActivity(intent);
+                break;
+            case R.id.nav_about:
+                new MaterialDialog.Builder(this)
+                        .title("About")
+                        .content(R.string.about, true)
+                        .positiveText(R.string.positive)
+                        .show();
+                break;
+            case R.id.nav_share:
+                try {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Staff-ED");
+                    String shareMessage= "\nILP Sandakan Staff E-Directory\n";
+                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                    startActivity(Intent.createChooser(shareIntent, "Choose One"));
+                } catch(Exception e) {
+                    Helper.showToast(getApplicationContext(),"Error Share");
+                }
                 break;
         }
         if (fragment != null) {
