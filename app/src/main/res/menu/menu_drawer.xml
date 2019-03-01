@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_user_group"
+            android:iconTint="@color/black"
+            android:title="All Staff" />
+        <!--<item-->
+            <!--android:id="@+id/nav_messages"-->
+            <!--android:icon="@drawable/ic_event"-->
+            <!--android:title="Messages"/>-->
+        <item
+            android:id="@+id/nav_bahagian"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Division" />
+    </group>
+
+    <item android:title="Account" android:checkableBehavior="none">
+        <menu>
+            <item
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/ic_form_lock"
+            android:title="Change Password" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_form_lock"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+    <item android:title="Info" android:checkableBehavior="none">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Share" />
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

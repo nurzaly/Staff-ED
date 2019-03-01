@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">Staff-ED</string>
+
+    <!--exit notification-->
+    <string name="press_again_exit_app">Press again to exit</string>
+
+    <!-- Settings for Notifications Setting -->
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
+    <!--dont edit-->
+
+
+    <string name="title_nav_home">Home</string>
+    <string name="navigation_drawer_open">Open Menu</string>
+    <string name="navigation_drawer_close">Close Menu</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>
